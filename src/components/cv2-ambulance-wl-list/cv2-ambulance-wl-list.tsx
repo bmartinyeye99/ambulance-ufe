@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Event, EventEmitter,  Host, h } from '@stencil/core';
 
 @Component({
   tag: 'cv2-ambulance-wl-list',
@@ -6,6 +6,7 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class Cv2AmbulanceWlList {
+  @Event({ eventName: "entry-clicked"}) entryClicked: EventEmitter<string>;
 
   waitingPatients: any[];
 
@@ -38,9 +39,9 @@ export class Cv2AmbulanceWlList {
   render() {
     return (
       <Host>
-                <md-list>
-          {this.waitingPatients.map(patient =>
-            <md-list-item>
+          <md-list>
+                {this.waitingPatients.map((patient, index) =>
+            <md-list-item onClick={ () => this.entryClicked.emit(index.toString())}>
               <div slot="headline">{patient.name}</div>
               <div slot="supporting-text">{"Predpokladaný vstup: " + patient.estimatedStart?.toLocaleString()}</div>
                 <md-icon slot="start">person</md-icon>
