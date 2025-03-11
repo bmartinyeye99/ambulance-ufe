@@ -1,13 +1,13 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { Cv2AmbulanceWlApp } from '../cv2-ambulance-wl-app';
 
-describe('<pfx>-ambulance-wl-app', () => {
+describe('cv2-ambulance-wl-app', () => {
 
   it('renders editor', async () => {
     const page = await newSpecPage({
       url: `http://localhost/entry/@new`,
       components: [Cv2AmbulanceWlApp],
-      html: `cv2-ambulance-wl-app base-path="/"></cv2-ambulance-wl-app>`,
+      html: `<cv2-ambulance-wl-app base-path="/"></cv2-ambulance-wl-app>`,
     });
     page.win.navigation = new EventTarget()
     const child = await page.root.shadowRoot.firstElementChild;

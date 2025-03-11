@@ -55,7 +55,9 @@ export class Cv2AmbulanceWlApp {
         ? <cv2-ambulance-wl-editor entry-id={entryId}
             onentry-clicked={ (ev: CustomEvent<string>)=> navigate("./entry/" + ev.detail) } >
           </cv2-ambulance-wl-editor>
-        : <cv2-ambulance-wl-list></cv2-ambulance-wl-list>
+        : <cv2-ambulance-wl-list
+            onentry-clicked={ (ev: CustomEvent<string>)=> navigate("./entry/" + ev.detail) } >
+          </cv2-ambulance-wl-list>
         }
   
       </Host>
