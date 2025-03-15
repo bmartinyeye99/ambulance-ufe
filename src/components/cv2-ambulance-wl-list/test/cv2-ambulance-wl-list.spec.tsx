@@ -3,7 +3,6 @@ import { Cv2AmbulanceWlList } from '../cv2-ambulance-wl-list';
 import { WaitingListEntry } from '../../../api/ambulance-wl/models';
 import fetchMock from 'jest-fetch-mock';
 
-
 describe('cv2-ambulance-wl-list', () => {
   const sampleEntries: WaitingListEntry[] = [
     {
@@ -32,6 +31,7 @@ describe('cv2-ambulance-wl-list', () => {
 
   it('renders', async () => {
     fetchMock.mockResponseOnce(JSON.stringify(sampleEntries));
+    
     const page = await newSpecPage({
       components: [Cv2AmbulanceWlList],
       html: `<cv2-ambulance-wl-list ambulance-id="test-ambulance" api-base="http://test/api"></cv2-ambulance-wl-list>`,
