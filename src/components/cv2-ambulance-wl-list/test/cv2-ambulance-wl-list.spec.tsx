@@ -53,7 +53,7 @@ describe('cv2-ambulance-wl-list', () => {
     fetchMock.mockRejectOnce(new Error('Network Error'));
     const page = await newSpecPage({
       components: [Cv2AmbulanceWlList],
-      html: `<<pfx>-ambulance-wl-list ambulance-id="test-ambulance" api-base="http://test/api"></<pfx>-ambulance-wl-list>`,
+      html: `<cv2-ambulance-wl-list ambulance-id="test-ambulance" api-base="http://test/api"></<cv2-ambulance-wl-list>`,
     });
 
     const wlList = page.rootInstance as Cv2AmbulanceWlList;
