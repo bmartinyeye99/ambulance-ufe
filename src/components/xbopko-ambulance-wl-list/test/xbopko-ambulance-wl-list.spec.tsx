@@ -1,9 +1,9 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { Cv2AmbulanceWlList } from '../cv2-ambulance-wl-list';
+import { xbopkoAmbulanceWlList } from '../xbopko-ambulance-wl-list';
 import { WaitingListEntry } from '../../../api/ambulance-wl/models';
 import fetchMock from 'jest-fetch-mock';
 
-describe('cv2-ambulance-wl-list', () => {
+describe('xbopko-ambulance-wl-list', () => {
   const sampleEntries: WaitingListEntry[] = [
     {
       id: "entry-1",
@@ -33,11 +33,11 @@ describe('cv2-ambulance-wl-list', () => {
     fetchMock.mockResponseOnce(JSON.stringify(sampleEntries));
     
     const page = await newSpecPage({
-      components: [Cv2AmbulanceWlList],
-      html: `<cv2-ambulance-wl-list ambulance-id="test-ambulance" api-base="http://test/api"></cv2-ambulance-wl-list>`,
+      components: [xbopkoAmbulanceWlList],
+      html: `<xbopko-ambulance-wl-list ambulance-id="test-ambulance" api-base="http://test/api"></xbopko-ambulance-wl-list>`,
     });
 
-    const wlList = page.rootInstance as Cv2AmbulanceWlList;
+    const wlList = page.rootInstance as xbopkoAmbulanceWlList;
     const expectedPatients = wlList?.waitingPatients?.length
 
     await page.waitForChanges();
@@ -52,11 +52,11 @@ describe('cv2-ambulance-wl-list', () => {
     // Mock the network error
     fetchMock.mockRejectOnce(new Error('Network Error'));
     const page = await newSpecPage({
-      components: [Cv2AmbulanceWlList],
-      html: `<cv2-ambulance-wl-list ambulance-id="test-ambulance" api-base="http://test/api"></<cv2-ambulance-wl-list>`,
+      components: [xbopkoAmbulanceWlList],
+      html: `<xbopko-ambulance-wl-list ambulance-id="test-ambulance" api-base="http://test/api"></<xbopko-ambulance-wl-list>`,
     });
 
-    const wlList = page.rootInstance as Cv2AmbulanceWlList;
+    const wlList = page.rootInstance as xbopkoAmbulanceWlList;
     const expectedPatients = wlList?.waitingPatients?.length;
 
     // Wait for the DOM to update

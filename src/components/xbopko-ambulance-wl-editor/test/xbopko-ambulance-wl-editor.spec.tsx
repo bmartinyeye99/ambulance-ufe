@@ -1,9 +1,9 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { Cv2AmbulanceWlEditor } from '../cv2-ambulance-wl-editor';
+import { xbopkoAmbulanceWlEditor } from '../xbopko-ambulance-wl-editor';
 import fetchMock from 'jest-fetch-mock';
 import { Condition, WaitingListEntry } from '../../../api/ambulance-wl';
 
-describe('cv2-ambulance-wl-editor', () => {
+describe('xbopko-ambulance-wl-editor', () => {
   const sampleEntry: WaitingListEntry = {
     id: "entry-1",
     patientId: "p-1",
@@ -51,8 +51,8 @@ describe('cv2-ambulance-wl-editor', () => {
     );
 
     const page = await newSpecPage({
-      components: [Cv2AmbulanceWlEditor],
-      html: `<cv2-ambulance-wl-editor entry-id="test-entry" ambulance-id="test-ambulance" api-base="http://sample.test/api"></cv2-ambulance-wl-editor>`,
+      components: [xbopkoAmbulanceWlEditor],
+      html: `<xbopko-ambulance-wl-editor entry-id="test-entry" ambulance-id="test-ambulance" api-base="http://sample.test/api"></xbopko-ambulance-wl-editor>`,
     });
 
     await delay(300);
@@ -70,8 +70,8 @@ describe('cv2-ambulance-wl-editor', () => {
     );
 
     const page = await newSpecPage({
-      components: [Cv2AmbulanceWlEditor],
-      html: `<cv2-ambulance-wl-editor entry-id="test-entry" ambulance-id="test-ambulance" api-base="http://sample.test/api"></cv2-ambulance-wl-editor>`,
+      components: [xbopkoAmbulanceWlEditor],
+      html: `<xbopko-ambulance-wl-editor entry-id="test-entry" ambulance-id="test-ambulance" api-base="http://sample.test/api"></xbopko-ambulance-wl-editor>`,
     });
 
     await delay(300);

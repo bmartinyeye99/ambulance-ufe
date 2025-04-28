@@ -4,11 +4,11 @@ declare global {
   interface Window { navigation: any; }
 }
 @Component({
-  tag: 'cv2-ambulance-wl-app',
-  styleUrl: 'cv2-ambulance-wl-app.css',
+  tag: 'xbopko-ambulance-wl-app',
+  styleUrl: 'xbopko-ambulance-wl-app.css',
   shadow: true,
 })
-export class Cv2AmbulanceWlApp {
+export class xbopkoAmbulanceWlApp {
   @State() private relativePath = "";
 
   @Prop() basePath: string="";
@@ -54,13 +54,13 @@ export class Cv2AmbulanceWlApp {
     return (
       <Host>
         { element === "editor"
-        ? <cv2-ambulance-wl-editor entry-id={entryId}
+        ? <xbopko-ambulance-wl-editor entry-id={entryId}
         ambulance-id={this.ambulanceId} api-base={this.apiBase}
           oneditor-closed={ () => navigate("./list")} >
-          </cv2-ambulance-wl-editor>
-        : <cv2-ambulance-wl-list ambulance-id={this.ambulanceId} api-base={this.apiBase}
+          </xbopko-ambulance-wl-editor>
+        : <xbopko-ambulance-wl-list ambulance-id={this.ambulanceId} api-base={this.apiBase}
             onentry-clicked={ (ev: CustomEvent<string>)=> navigate("./entry/" + ev.detail) } >
-          </cv2-ambulance-wl-list>
+          </xbopko-ambulance-wl-list>
         }
   
       </Host>

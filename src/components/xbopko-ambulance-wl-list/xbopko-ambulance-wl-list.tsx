@@ -2,11 +2,11 @@ import { Component, Event, EventEmitter, Host, Prop, State, h } from '@stencil/c
 import { AmbulanceWaitingListApi, WaitingListEntry, Configuration } from '../../api/ambulance-wl';
 
 @Component({
-  tag: 'cv2-ambulance-wl-list',
-  styleUrl: 'cv2-ambulance-wl-list.css',
+  tag: 'xbopko-ambulance-wl-list',
+  styleUrl: 'xbopko-ambulance-wl-list.css',
   shadow: true,
 })
-export class Cv2AmbulanceWlList {
+export class xbopkoAmbulanceWlList {
   @Event({ eventName: "entry-clicked"}) entryClicked: EventEmitter<string>;
   @Prop() apiBase: string;
   @Prop() ambulanceId: string;
