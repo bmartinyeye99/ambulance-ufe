@@ -6,20 +6,6 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface xbopkoAmbulanceWlApp {
-        "ambulanceId": string;
-        "apiBase": string;
-        "basePath": string;
-    }
-    interface xbopkoAmbulanceWlEditor {
-        "ambulanceId": string;
-        "apiBase": string;
-        "entryId": string;
-    }
-    interface xbopkoAmbulanceWlList {
-        "ambulanceId": string;
-        "apiBase": string;
-    }
     interface MyComponent {
         /**
           * The first name
@@ -34,86 +20,84 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface XbopkoAmbulanceWlApp {
+        "ambulanceId": string;
+        "apiBase": string;
+        "basePath": string;
+    }
+    interface XbopkoAmbulanceWlEditor {
+        "ambulanceId": string;
+        "apiBase": string;
+        "entryId": string;
+    }
+    interface XbopkoAmbulanceWlList {
+        "ambulanceId": string;
+        "apiBase": string;
+    }
 }
-export interface xbopkoAmbulanceWlEditorCustomEvent<T> extends CustomEvent<T> {
+export interface XbopkoAmbulanceWlEditorCustomEvent<T> extends CustomEvent<T> {
     detail: T;
-    target: HTMLxbopkoAmbulanceWlEditorElement;
+    target: HTMLXbopkoAmbulanceWlEditorElement;
 }
-export interface xbopkoAmbulanceWlListCustomEvent<T> extends CustomEvent<T> {
+export interface XbopkoAmbulanceWlListCustomEvent<T> extends CustomEvent<T> {
     detail: T;
-    target: HTMLxbopkoAmbulanceWlListElement;
+    target: HTMLXbopkoAmbulanceWlListElement;
 }
 declare global {
-    interface HTMLxbopkoAmbulanceWlAppElement extends Components.xbopkoAmbulanceWlApp, HTMLStencilElement {
-    }
-    var HTMLxbopkoAmbulanceWlAppElement: {
-        prototype: HTMLxbopkoAmbulanceWlAppElement;
-        new (): HTMLxbopkoAmbulanceWlAppElement;
-    };
-    interface HTMLxbopkoAmbulanceWlEditorElementEventMap {
-        "editor-closed": string;
-    }
-    interface HTMLxbopkoAmbulanceWlEditorElement extends Components.xbopkoAmbulanceWlEditor, HTMLStencilElement {
-        addEventListener<K extends keyof HTMLxbopkoAmbulanceWlEditorElementEventMap>(type: K, listener: (this: HTMLxbopkoAmbulanceWlEditorElement, ev: xbopkoAmbulanceWlEditorCustomEvent<HTMLxbopkoAmbulanceWlEditorElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
-        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
-        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
-        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
-        removeEventListener<K extends keyof HTMLxbopkoAmbulanceWlEditorElementEventMap>(type: K, listener: (this: HTMLxbopkoAmbulanceWlEditorElement, ev: xbopkoAmbulanceWlEditorCustomEvent<HTMLxbopkoAmbulanceWlEditorElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
-        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
-        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
-        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
-    }
-    var HTMLxbopkoAmbulanceWlEditorElement: {
-        prototype: HTMLxbopkoAmbulanceWlEditorElement;
-        new (): HTMLxbopkoAmbulanceWlEditorElement;
-    };
-    interface HTMLxbopkoAmbulanceWlListElementEventMap {
-        "entry-clicked": string;
-    }
-    interface HTMLxbopkoAmbulanceWlListElement extends Components.xbopkoAmbulanceWlList, HTMLStencilElement {
-        addEventListener<K extends keyof HTMLxbopkoAmbulanceWlListElementEventMap>(type: K, listener: (this: HTMLxbopkoAmbulanceWlListElement, ev: xbopkoAmbulanceWlListCustomEvent<HTMLxbopkoAmbulanceWlListElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
-        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
-        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
-        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
-        removeEventListener<K extends keyof HTMLxbopkoAmbulanceWlListElementEventMap>(type: K, listener: (this: HTMLxbopkoAmbulanceWlListElement, ev: xbopkoAmbulanceWlListCustomEvent<HTMLxbopkoAmbulanceWlListElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
-        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
-        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
-        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
-    }
-    var HTMLxbopkoAmbulanceWlListElement: {
-        prototype: HTMLxbopkoAmbulanceWlListElement;
-        new (): HTMLxbopkoAmbulanceWlListElement;
-    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLXbopkoAmbulanceWlAppElement extends Components.XbopkoAmbulanceWlApp, HTMLStencilElement {
+    }
+    var HTMLXbopkoAmbulanceWlAppElement: {
+        prototype: HTMLXbopkoAmbulanceWlAppElement;
+        new (): HTMLXbopkoAmbulanceWlAppElement;
+    };
+    interface HTMLXbopkoAmbulanceWlEditorElementEventMap {
+        "editor-closed": string;
+    }
+    interface HTMLXbopkoAmbulanceWlEditorElement extends Components.XbopkoAmbulanceWlEditor, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLXbopkoAmbulanceWlEditorElementEventMap>(type: K, listener: (this: HTMLXbopkoAmbulanceWlEditorElement, ev: XbopkoAmbulanceWlEditorCustomEvent<HTMLXbopkoAmbulanceWlEditorElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLXbopkoAmbulanceWlEditorElementEventMap>(type: K, listener: (this: HTMLXbopkoAmbulanceWlEditorElement, ev: XbopkoAmbulanceWlEditorCustomEvent<HTMLXbopkoAmbulanceWlEditorElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLXbopkoAmbulanceWlEditorElement: {
+        prototype: HTMLXbopkoAmbulanceWlEditorElement;
+        new (): HTMLXbopkoAmbulanceWlEditorElement;
+    };
+    interface HTMLXbopkoAmbulanceWlListElementEventMap {
+        "entry-clicked": string;
+    }
+    interface HTMLXbopkoAmbulanceWlListElement extends Components.XbopkoAmbulanceWlList, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLXbopkoAmbulanceWlListElementEventMap>(type: K, listener: (this: HTMLXbopkoAmbulanceWlListElement, ev: XbopkoAmbulanceWlListCustomEvent<HTMLXbopkoAmbulanceWlListElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLXbopkoAmbulanceWlListElementEventMap>(type: K, listener: (this: HTMLXbopkoAmbulanceWlListElement, ev: XbopkoAmbulanceWlListCustomEvent<HTMLXbopkoAmbulanceWlListElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLXbopkoAmbulanceWlListElement: {
+        prototype: HTMLXbopkoAmbulanceWlListElement;
+        new (): HTMLXbopkoAmbulanceWlListElement;
+    };
     interface HTMLElementTagNameMap {
-        "xbopko-ambulance-wl-app": HTMLxbopkoAmbulanceWlAppElement;
-        "xbopko-ambulance-wl-editor": HTMLxbopkoAmbulanceWlEditorElement;
-        "xbopko-ambulance-wl-list": HTMLxbopkoAmbulanceWlListElement;
         "my-component": HTMLMyComponentElement;
+        "xbopko-ambulance-wl-app": HTMLXbopkoAmbulanceWlAppElement;
+        "xbopko-ambulance-wl-editor": HTMLXbopkoAmbulanceWlEditorElement;
+        "xbopko-ambulance-wl-list": HTMLXbopkoAmbulanceWlListElement;
     }
 }
 declare namespace LocalJSX {
-    interface xbopkoAmbulanceWlApp {
-        "ambulanceId"?: string;
-        "apiBase"?: string;
-        "basePath"?: string;
-    }
-    interface xbopkoAmbulanceWlEditor {
-        "ambulanceId"?: string;
-        "apiBase"?: string;
-        "entryId"?: string;
-        "onEditor-closed"?: (event: xbopkoAmbulanceWlEditorCustomEvent<string>) => void;
-    }
-    interface xbopkoAmbulanceWlList {
-        "ambulanceId"?: string;
-        "apiBase"?: string;
-        "onEntry-clicked"?: (event: xbopkoAmbulanceWlListCustomEvent<string>) => void;
-    }
     interface MyComponent {
         /**
           * The first name
@@ -128,21 +112,37 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface XbopkoAmbulanceWlApp {
+        "ambulanceId"?: string;
+        "apiBase"?: string;
+        "basePath"?: string;
+    }
+    interface XbopkoAmbulanceWlEditor {
+        "ambulanceId"?: string;
+        "apiBase"?: string;
+        "entryId"?: string;
+        "onEditor-closed"?: (event: XbopkoAmbulanceWlEditorCustomEvent<string>) => void;
+    }
+    interface XbopkoAmbulanceWlList {
+        "ambulanceId"?: string;
+        "apiBase"?: string;
+        "onEntry-clicked"?: (event: XbopkoAmbulanceWlListCustomEvent<string>) => void;
+    }
     interface IntrinsicElements {
-        "xbopko-ambulance-wl-app": xbopkoAmbulanceWlApp;
-        "xbopko-ambulance-wl-editor": xbopkoAmbulanceWlEditor;
-        "xbopko-ambulance-wl-list": xbopkoAmbulanceWlList;
         "my-component": MyComponent;
+        "xbopko-ambulance-wl-app": XbopkoAmbulanceWlApp;
+        "xbopko-ambulance-wl-editor": XbopkoAmbulanceWlEditor;
+        "xbopko-ambulance-wl-list": XbopkoAmbulanceWlList;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "xbopko-ambulance-wl-app": LocalJSX.xbopkoAmbulanceWlApp & JSXBase.HTMLAttributes<HTMLxbopkoAmbulanceWlAppElement>;
-            "xbopko-ambulance-wl-editor": LocalJSX.xbopkoAmbulanceWlEditor & JSXBase.HTMLAttributes<HTMLxbopkoAmbulanceWlEditorElement>;
-            "xbopko-ambulance-wl-list": LocalJSX.xbopkoAmbulanceWlList & JSXBase.HTMLAttributes<HTMLxbopkoAmbulanceWlListElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "xbopko-ambulance-wl-app": LocalJSX.XbopkoAmbulanceWlApp & JSXBase.HTMLAttributes<HTMLXbopkoAmbulanceWlAppElement>;
+            "xbopko-ambulance-wl-editor": LocalJSX.XbopkoAmbulanceWlEditor & JSXBase.HTMLAttributes<HTMLXbopkoAmbulanceWlEditorElement>;
+            "xbopko-ambulance-wl-list": LocalJSX.XbopkoAmbulanceWlList & JSXBase.HTMLAttributes<HTMLXbopkoAmbulanceWlListElement>;
         }
     }
 }
